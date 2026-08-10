@@ -529,7 +529,7 @@ footer{
 .cal-frame iframe {
   width: 100%;
   height: 820px;
-  min-height: 720px;
+  min-height: 560px;
   border: none;
   display: block;
   border-radius: 10px;
@@ -545,6 +545,6 @@ footer{
   }
   .cal-frame iframe {
     height: 900px;
-    min-height: 640px;
+    min-height: 480px;
   }
 }
