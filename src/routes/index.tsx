@@ -46,17 +46,15 @@ function Landing() {
     };
     document.addEventListener("click", onClick);
 
-    // --- Calendario embebido ---------------------------------------------
-    // El widget avisa su alto real por postMessage en cada paso (calendario ->
-    // formulario). Escuchamos esos mensajes y estiramos el iframe, así en mobile
-    // el formulario nunca queda cortado y se scrollea con la página.
+    // --- Popup del formulario de WhatsApp --------------------------------
     const CAL_ORIGIN = "https://os.caminodigitalllc.com";
-    const getFrame = () => document.querySelector<HTMLIFrameElement>(".cal-frame iframe");
+    const modal = () => document.getElementById("wa-modal");
+    const getFrame = () => document.querySelector<HTMLIFrameElement>(".wa-frame iframe");
 
     const applyHeight = (value: unknown) => {
       const h = typeof value === "string" ? parseInt(value, 10) : Number(value);
       const frame = getFrame();
-      if (frame && Number.isFinite(h) && h > 240) {
+      if (frame && Number.isFinite(h) && h > 200) {
         frame.style.height = `${Math.ceil(h)}px`;
       }
     };
@@ -73,6 +71,43 @@ function Landing() {
     unhide();
     const calTimer = window.setInterval(unhide, 400);
     const calStop = window.setTimeout(() => window.clearInterval(calTimer), 15000);
+
+    const openModal = () => {
+      const m = modal();
+      if (!m) return;
+      m.classList.add("open");
+      m.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      unhide();
+    };
+    const closeModal = () => {
+      const m = modal();
+      if (!m) return;
+      m.classList.remove("open");
+      m.setAttribute("aria-hidden", "true");
+      document.body.style.removeProperty("overflow");
+    };
+
+    const onDocClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const trigger = target.closest<HTMLElement>('a[href="#agendar"], [data-wa-open]');
+      if (trigger) {
+        e.preventDefault();
+        openModal();
+        return;
+      }
+      if (target.closest("[data-wa-close]")) {
+        e.preventDefault();
+        closeModal();
+      }
+    };
+    document.addEventListener("click", onDocClick);
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.addEventListener("keydown", onKey);
 
     const onMessage = (event: MessageEvent) => {
       if (event.origin !== CAL_ORIGIN) return;
@@ -105,6 +140,7 @@ function Landing() {
       script.async = true;
       document.body.appendChild(script);
     }
+
 
 
 
