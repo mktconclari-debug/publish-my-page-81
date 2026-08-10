@@ -427,3 +427,83 @@ footer{
   color:var(--line-gold);
   letter-spacing:.05em;
 }
+
+/* QUIEN SOY — layout editorial alineado a la izquierda */
+.sobre-mi{padding:88px 0;}
+.qs-block{max-width:1000px; margin:0 auto; background:transparent; padding:0;}
+.qs-eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  font-size:12.5px;
+  letter-spacing:.18em;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+.qs-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size:clamp(34px,5vw,52px);
+  color:var(--ink);
+  line-height:1.05;
+  margin-bottom:16px;
+}
+.qs-rule{
+  width:88px; height:5px; border-radius:99px;
+  background:var(--gold-gradient);
+  background-size:250% 100%;
+  animation:shimmer 3s linear infinite;
+  margin-bottom:22px;
+}
+.qs-lead{
+  font-size:19px;
+  color:var(--body-text);
+  margin-bottom:38px;
+}
+.qs-cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+@media(max-width:700px){.qs-cards{grid-template-columns:1fr;}}
+.qs-card{
+  background:#fff;
+  border:1.5px solid var(--ink);
+  border-radius:16px;
+  padding:26px 26px 24px;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.qs-card:hover{transform:translateY(-4px); box-shadow:0 14px 34px -18px rgba(184,146,60,.6);}
+.qs-badge{
+  width:44px; height:44px;
+  border-radius:11px;
+  background:var(--panel);
+  display:flex; align-items:center; justify-content:center;
+  font-size:19px;
+  margin-bottom:16px;
+}
+.qs-card h4{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  font-size:19px;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+.qs-card p{font-size:16px; color:var(--body-text);}
+.qs-ted-title{
+  text-align:center;
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size:clamp(22px,3vw,28px);
+  color:var(--ink);
+  margin:56px 0 22px;
+}
+.qs-ted-title::before{display:none;}
+.qs-ted{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--ink);
+  aspect-ratio:16/9;
+  box-shadow:0 24px 60px -30px rgba(0,0,0,.55);
+}
+.qs-ted iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
