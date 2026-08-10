@@ -161,11 +161,15 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onKey);
       window.removeEventListener("message", onMessage);
       window.clearInterval(calTimer);
       window.clearTimeout(calStop);
+      document.body.style.removeProperty("overflow");
       io.disconnect();
     };
+
 
   }, []);
 
