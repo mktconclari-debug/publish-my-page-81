@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const HTML = "\n\n<section class=\"hero\">\n  <div class=\"wrap\">\n    <span class=\"pill shine\">PARA MENTORAS, COACHES Y EXPERTAS QUE QUIEREN ESCALAR</span>\n    <h1>El Paso a Paso exacto para escalar tu <em>High Ticket</em></h1>\n    <p class=\"sub\">El mismo que usaron mis clientas para escalar a 22K, 10K, 9K y 7K en solo 4 meses.</p>\n    <a href=\"#agendar\" class=\"cta-btn shine\">AGENDAR MI LLAMADA \u2192</a>\n    <div class=\"hero-note\">Cupos limitados \u00b7 Solo tomamos entre 5 y 10 perfiles por mes</div>\n  </div>\n</section>\n\n<section class=\"vsl\">\n  <div class=\"wrap\">\n    <div class=\"video-frame\">\n      <iframe src=\"https://www.youtube.com/embed/vOH1vhtmLfk\" title=\"Video presentación\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      <div class=\"video-caption\">Mir\u00e1 el video completo antes de agendar tu llamada \u2193</div>\n    </div>\n  </div>\n</section>\n\n<section class=\"calendario\" id=\"agendar\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">AGENDA DISPONIBLE</div>\n    <h2 class=\"section-title\">Eleg\u00ed el d\u00eda y horario de tu llamada</h2>\n    <div class=\"cal-frame\">\n      <iframe src=\"https://os.caminodigitalllc.com/widget/booking/TSsLaY1sPMSOMEcq1XP2\" allow=\"payment\" scrolling=\"no\" id=\"I2FfDIC3AS1kKzvMHUKA_1786388024640\" title=\"Agendar llamada\"></iframe>\n    </div>\n  </div>\n</section>\n\n<section class=\"problema\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">SI ESTO TE HACE RUIDO, ES PARA VOS</div>\n    <h2 class=\"section-title\">\u00bfHace cu\u00e1nto est\u00e1s en esta situaci\u00f3n?</h2>\n    <div class=\"problema-grid\">\n      <div class=\"problem-card\">\n        <div class=\"num\">01</div>\n        <p>Public\u00e1s contenido sin un sistema real que te traiga clientes calificados, los que s\u00ed pueden pagarte un ticket alto.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">02</div>\n        <p>Est\u00e1s todo el d\u00eda en llamada, d\u00e1ndole seguimiento manual a cada cliente, sin tiempo para dedicarte a lo que hace crecer el negocio.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">03</div>\n        <p>Segu\u00eds cobrando barato porque en el fondo no termin\u00e1s de creer que se puede vender distinto.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">04</div>\n        <p>Est\u00e1s atada a tu tiempo: si vos no trabaj\u00e1s, no entra plata. Y as\u00ed es imposible escalar.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"casos\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">CASOS REALES, DENTRO DEL PROGRAMA</div>\n    <h2 class=\"section-title\">Esto es lo que pas\u00f3 cuando aplicaron el sistema</h2>\n    <div class=\"casos-grid\">\n      <div class=\"caso reveal\" style=\"animation-delay:.05s\">\n        <div class=\"nombre\">Miranda</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/mirandagiok/\" target=\"_blank\" rel=\"noopener\">@mirandagiok</a>\n        <div class=\"resultado\">2K \u2192 10K/mes</div>\n        <p>Pas\u00f3 de 5.000 a 40.000 seguidores y multiplic\u00f3 su facturaci\u00f3n.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.1s\">\n        <div class=\"nombre\">Sele</div>\n        <div class=\"resultado\">0 \u2192 9K/mes</div>\n        <p>Empez\u00f3 de cero su cuenta y en 60 d\u00edas explotaron las ventas.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.15s\">\n        <div class=\"nombre\">Jesi</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/jesicellucci.ok/\" target=\"_blank\" rel=\"noopener\">@jesicellucci.ok</a>\n        <div class=\"resultado\">7K facturados</div>\n        <p>Factur\u00f3 con su propio programa siguiendo el sistema.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.2s\">\n        <div class=\"nombre\">Vicky</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/vickysolodujin/\" target=\"_blank\" rel=\"noopener\">@vickysolodujin</a>\n        <div class=\"resultado\">+3K desde cero</div>\n        <p>Literalmente empezando de cero, sin audiencia previa.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.25s\">\n        <div class=\"nombre\">Ale</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/alevogeler/\" target=\"_blank\" rel=\"noopener\">@alevogeler</a>\n        <div class=\"resultado\">22K/mes</div>\n        <p>Sali\u00f3 del 1 a 1: pas\u00f3 de sesiones de 50 d\u00f3lares a un ticket de 4.000.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.3s\">\n        <div class=\"nombre\">Mica</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/micahernandez.mkt/\" target=\"_blank\" rel=\"noopener\">@micahernandez.mkt</a>\n        <div class=\"resultado\">4K/mes</div>\n        <p>Dej\u00f3 su trabajo en relaci\u00f3n de dependencia empezando desde cero.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"sobre-mi\" id=\"quien-soy\">\n  <div class=\"wrap\">\n    <div class=\"qs-block\">\n      <div class=\"qs-eyebrow\">QUI\u00c9N SOY</div>\n      <h2 class=\"qs-title\">Clara P\u00e9rez</h2>\n      <div class=\"qs-rule\"></div>\n      <p class=\"qs-lead\">Ayudo a mujeres a escalar su high ticket.</p>\n\n      <div class=\"qs-cards\">\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udcc8</div>\n          <h4>+10 a\u00f1os de experiencia</h4>\n          <p>En negocios online y marketing digital.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udc65</div>\n          <h4>+500.000 seguidores</h4>\n          <p>Entre todas mis cuentas.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83c\udfa4</div>\n          <h4>Conferencista en empresas</h4>\n          <p>Charlas y capacitaciones para equipos y organizaciones.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udd34</div>\n          <h4>Conferencista TED</h4>\n          <p>Y parte del equipo organizador de charlas TED.</p>\n        </div>\n      </div>\n\n      <h3 class=\"qs-ted-title\">Mir\u00e1 mi charla TED</h3>\n      <div class=\"qs-ted\">\n        <iframe src=\"https://www.youtube.com/embed/Z7qYzo46IjQ\" title=\"El precio de vivir sin prop\u00f3sito | Maria Clara P\u00e9rez | TEDxBarrioSanIsidro\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"cierre\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">EL SIGUIENTE PASO</div>\n    <h2 class=\"section-title\">Agend\u00e1 tu llamada con mi equipo</h2>\n    <p class=\"lead\">Vamos a analizar tu caso puntual y ver si est\u00e1s en el punto para dar este paso. Cada semana tomamos entre 40 y 60 llamadas y elegimos \u00fanicamente a los perfiles 100% comprometidos.</p>\n    <a href=\"#agendar\" class=\"cta-btn shine\">QUIERO AGENDAR MI LLAMADA \u2192</a>\n    <div class=\"filtro\">Si no ingres\u00e1s al programa, igual sal\u00eds con un roadmap claro de tus pr\u00f3ximos pasos.</div>\n  </div>\n</section>\n\n<footer>\n  CLARI P\u00c9REZ \u00b7 @soyclaraperez\n</footer>\n\n";
+const HTML = "\n\n<section class=\"hero\">\n  <div class=\"wrap\">\n    <span class=\"pill shine\">PARA MENTORAS, COACHES Y EXPERTAS QUE QUIEREN ESCALAR</span>\n    <h1>El Paso a Paso exacto para escalar tu <em>High Ticket</em></h1>\n    <p class=\"sub\">El mismo que usaron mis clientas para escalar a 22K, 10K, 9K y 7K en solo 4 meses.</p>\n    <a href=\"#agendar\" class=\"cta-btn shine\">AGENDAR MI LLAMADA \u2192</a>\n    <div class=\"hero-note\">Cupos limitados \u00b7 Solo tomamos entre 5 y 10 perfiles por mes</div>\n  </div>\n</section>\n\n<section class=\"vsl\">\n  <div class=\"wrap\">\n    <div class=\"video-frame\">\n      <iframe src=\"https://www.youtube.com/embed/vOH1vhtmLfk\" title=\"Video presentación\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      <div class=\"video-caption\">Mir\u00e1 el video completo antes de agendar tu llamada \u2193</div>\n    </div>\n  </div>\n</section>\n\n<section class=\"problema\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">SI ESTO TE HACE RUIDO, ES PARA VOS</div>\n    <h2 class=\"section-title\">\u00bfHace cu\u00e1nto est\u00e1s en esta situaci\u00f3n?</h2>\n    <div class=\"problema-grid\">\n      <div class=\"problem-card\">\n        <div class=\"num\">01</div>\n        <p>Public\u00e1s contenido sin un sistema real que te traiga clientes calificados, los que s\u00ed pueden pagarte un ticket alto.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">02</div>\n        <p>Est\u00e1s todo el d\u00eda en llamada, d\u00e1ndole seguimiento manual a cada cliente, sin tiempo para dedicarte a lo que hace crecer el negocio.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">03</div>\n        <p>Segu\u00eds cobrando barato porque en el fondo no termin\u00e1s de creer que se puede vender distinto.</p>\n      </div>\n      <div class=\"problem-card\">\n        <div class=\"num\">04</div>\n        <p>Est\u00e1s atada a tu tiempo: si vos no trabaj\u00e1s, no entra plata. Y as\u00ed es imposible escalar.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"casos\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">CASOS REALES, DENTRO DEL PROGRAMA</div>\n    <h2 class=\"section-title\">Esto es lo que pas\u00f3 cuando aplicaron el sistema</h2>\n    <div class=\"casos-grid\">\n      <div class=\"caso reveal\" style=\"animation-delay:.05s\">\n        <div class=\"nombre\">Miranda</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/mirandagiok/\" target=\"_blank\" rel=\"noopener\">@mirandagiok</a>\n        <div class=\"resultado\">2K \u2192 10K/mes</div>\n        <p>Pas\u00f3 de 5.000 a 40.000 seguidores y multiplic\u00f3 su facturaci\u00f3n.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.1s\">\n        <div class=\"nombre\">Sele</div>\n        <div class=\"resultado\">0 \u2192 9K/mes</div>\n        <p>Empez\u00f3 de cero su cuenta y en 60 d\u00edas explotaron las ventas.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.15s\">\n        <div class=\"nombre\">Jesi</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/jesicellucci.ok/\" target=\"_blank\" rel=\"noopener\">@jesicellucci.ok</a>\n        <div class=\"resultado\">7K facturados</div>\n        <p>Factur\u00f3 con su propio programa siguiendo el sistema.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.2s\">\n        <div class=\"nombre\">Vicky</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/vickysolodujin/\" target=\"_blank\" rel=\"noopener\">@vickysolodujin</a>\n        <div class=\"resultado\">+3K desde cero</div>\n        <p>Literalmente empezando de cero, sin audiencia previa.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.25s\">\n        <div class=\"nombre\">Ale</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/alevogeler/\" target=\"_blank\" rel=\"noopener\">@alevogeler</a>\n        <div class=\"resultado\">22K/mes</div>\n        <p>Sali\u00f3 del 1 a 1: pas\u00f3 de sesiones de 50 d\u00f3lares a un ticket de 4.000.</p>\n      </div>\n      <div class=\"caso reveal\" style=\"animation-delay:.3s\">\n        <div class=\"nombre\">Mica</div>\n        <a class=\"handle\" href=\"https://www.instagram.com/micahernandez.mkt/\" target=\"_blank\" rel=\"noopener\">@micahernandez.mkt</a>\n        <div class=\"resultado\">4K/mes</div>\n        <p>Dej\u00f3 su trabajo en relaci\u00f3n de dependencia empezando desde cero.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"sobre-mi\" id=\"quien-soy\">\n  <div class=\"wrap\">\n    <div class=\"qs-block\">\n      <div class=\"qs-eyebrow\">QUI\u00c9N SOY</div>\n      <h2 class=\"qs-title\">Clara P\u00e9rez</h2>\n      <div class=\"qs-rule\"></div>\n      <p class=\"qs-lead\">Ayudo a mujeres a escalar su high ticket.</p>\n\n      <div class=\"qs-cards\">\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udcc8</div>\n          <h4>+10 a\u00f1os de experiencia</h4>\n          <p>En negocios online y marketing digital.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udc65</div>\n          <h4>+500.000 seguidores</h4>\n          <p>Entre todas mis cuentas.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83c\udfa4</div>\n          <h4>Conferencista en empresas</h4>\n          <p>Charlas y capacitaciones para equipos y organizaciones.</p>\n        </div>\n        <div class=\"qs-card\">\n          <div class=\"qs-badge\">\ud83d\udd34</div>\n          <h4>Conferencista TED</h4>\n          <p>Y parte del equipo organizador de charlas TED.</p>\n        </div>\n      </div>\n\n      <h3 class=\"qs-ted-title\">Mir\u00e1 mi charla TED</h3>\n      <div class=\"qs-ted\">\n        <iframe src=\"https://www.youtube.com/embed/Z7qYzo46IjQ\" title=\"El precio de vivir sin prop\u00f3sito | Maria Clara P\u00e9rez | TEDxBarrioSanIsidro\" loading=\"lazy\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"cierre\">\n  <div class=\"wrap\">\n    <div class=\"section-sub\">EL SIGUIENTE PASO</div>\n    <h2 class=\"section-title\">Agend\u00e1 tu llamada con mi equipo</h2>\n    <p class=\"lead\">Vamos a analizar tu caso puntual y ver si est\u00e1s en el punto para dar este paso. Cada semana tomamos entre 40 y 60 llamadas y elegimos \u00fanicamente a los perfiles 100% comprometidos.</p>\n    <a href=\"#agendar\" class=\"cta-btn shine\">QUIERO AGENDAR MI LLAMADA \u2192</a>\n    <div class=\"filtro\">Si no ingres\u00e1s al programa, igual sal\u00eds con un roadmap claro de tus pr\u00f3ximos pasos.</div>\n  </div>\n</section>\n\n<div class=\"wa-modal\" id=\"wa-modal\" aria-hidden=\"true\"><div class=\"wa-backdrop\" data-wa-close=\"1\"></div><div class=\"wa-dialog\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Iniciar conversaci\u00f3n por WhatsApp\"><button class=\"wa-close\" type=\"button\" data-wa-close=\"1\" aria-label=\"Cerrar\">\u00d7</button><div class=\"wa-head\"><div class=\"section-sub\">\u00daLTIMO PASO</div><h3>Escribinos por WhatsApp</h3><p>Complet\u00e1 tus datos y seguimos la conversaci\u00f3n por ah\u00ed.</p></div><div class=\"wa-frame\"><iframe src=\"https://os.caminodigitalllc.com/widget/form/ImunyMrqPMbsCPLd4LNs\" id=\"inline-ImunyMrqPMbsCPLd4LNs\" data-layout=\"{'id':'INLINE'}\" data-trigger-type=\"alwaysShow\" data-trigger-value=\"\" data-activation-type=\"alwaysActivated\" data-activation-value=\"\" data-deactivation-type=\"neverDeactivate\" data-deactivation-value=\"\" data-form-name=\"Iniciar Conversacion - Whatsapp\" data-height=\"402\" data-layout-iframe-id=\"inline-ImunyMrqPMbsCPLd4LNs\" data-form-id=\"ImunyMrqPMbsCPLd4LNs\" title=\"Iniciar Conversacion - Whatsapp\"></iframe></div></div></div>\n\n<footer>\n  CLARI P\u00c9REZ \u00b7 @soyclaraperez\n</footer>\n\n";
 
 function Landing() {
   useEffect(() => {
@@ -46,17 +46,15 @@ function Landing() {
     };
     document.addEventListener("click", onClick);
 
-    // --- Calendario embebido ---------------------------------------------
-    // El widget avisa su alto real por postMessage en cada paso (calendario ->
-    // formulario). Escuchamos esos mensajes y estiramos el iframe, así en mobile
-    // el formulario nunca queda cortado y se scrollea con la página.
+    // --- Popup del formulario de WhatsApp --------------------------------
     const CAL_ORIGIN = "https://os.caminodigitalllc.com";
-    const getFrame = () => document.querySelector<HTMLIFrameElement>(".cal-frame iframe");
+    const modal = () => document.getElementById("wa-modal");
+    const getFrame = () => document.querySelector<HTMLIFrameElement>(".wa-frame iframe");
 
     const applyHeight = (value: unknown) => {
       const h = typeof value === "string" ? parseInt(value, 10) : Number(value);
       const frame = getFrame();
-      if (frame && Number.isFinite(h) && h > 240) {
+      if (frame && Number.isFinite(h) && h > 200) {
         frame.style.height = `${Math.ceil(h)}px`;
       }
     };
@@ -73,6 +71,43 @@ function Landing() {
     unhide();
     const calTimer = window.setInterval(unhide, 400);
     const calStop = window.setTimeout(() => window.clearInterval(calTimer), 15000);
+
+    const openModal = () => {
+      const m = modal();
+      if (!m) return;
+      m.classList.add("open");
+      m.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      unhide();
+    };
+    const closeModal = () => {
+      const m = modal();
+      if (!m) return;
+      m.classList.remove("open");
+      m.setAttribute("aria-hidden", "true");
+      document.body.style.removeProperty("overflow");
+    };
+
+    const onDocClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const trigger = target.closest<HTMLElement>('a[href="#agendar"], [data-wa-open]');
+      if (trigger) {
+        e.preventDefault();
+        openModal();
+        return;
+      }
+      if (target.closest("[data-wa-close]")) {
+        e.preventDefault();
+        closeModal();
+      }
+    };
+    document.addEventListener("click", onDocClick);
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.addEventListener("keydown", onKey);
 
     const onMessage = (event: MessageEvent) => {
       if (event.origin !== CAL_ORIGIN) return;
@@ -109,6 +144,7 @@ function Landing() {
 
 
 
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -125,11 +161,15 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onKey);
       window.removeEventListener("message", onMessage);
       window.clearInterval(calTimer);
       window.clearTimeout(calStop);
+      document.body.style.removeProperty("overflow");
       io.disconnect();
     };
+
 
   }, []);
 
