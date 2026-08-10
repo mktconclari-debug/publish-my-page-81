@@ -544,7 +544,7 @@ footer{
     padding: 4px;
   }
   .cal-frame iframe {
-    height: 1100px;
-    min-height: 1100px;
+    height: 900px;
+    min-height: 640px;
   }
 }
