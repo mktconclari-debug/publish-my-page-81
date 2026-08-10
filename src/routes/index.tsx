@@ -46,16 +46,67 @@ function Landing() {
     };
     document.addEventListener("click", onClick);
 
-    // El script de embed del calendario esconde el iframe fuera de pantalla
-    // hasta recibir su mensaje de "listo". Si eso no llega, la sección queda
-    // vacía, así que restauramos el iframe con una altura fija.
-    const fixCalendar = () => {
-      const frame = document.querySelector<HTMLIFrameElement>(".cal-frame iframe");
-      if (frame) frame.removeAttribute("style");
+    // --- Calendario embebido ---------------------------------------------
+    // El widget avisa su alto real por postMessage en cada paso (calendario ->
+    // formulario). Escuchamos esos mensajes y estiramos el iframe, así en mobile
+    // el formulario nunca queda cortado y se scrollea con la página.
+    const CAL_ORIGIN = "https://os.caminodigitalllc.com";
+    const getFrame = () => document.querySelector<HTMLIFrameElement>(".cal-frame iframe");
+
+    const applyHeight = (value: unknown) => {
+      const h = typeof value === "string" ? parseInt(value, 10) : Number(value);
+      const frame = getFrame();
+      if (frame && Number.isFinite(h) && h > 240) {
+        frame.style.height = `${Math.ceil(h)}px`;
+      }
     };
-    fixCalendar();
-    const calTimer = window.setInterval(fixCalendar, 500);
-    const calStop = window.setTimeout(() => window.clearInterval(calTimer), 8000);
+
+    // El script de embed esconde el iframe fuera de pantalla hasta recibir su
+    // propio mensaje de "listo"; si no llega, lo devolvemos a su lugar.
+    const unhide = () => {
+      const frame = getFrame();
+      if (!frame) return;
+      ["opacity", "visibility", "pointer-events", "position", "left", "top"].forEach((prop) =>
+        frame.style.removeProperty(prop),
+      );
+    };
+    unhide();
+    const calTimer = window.setInterval(unhide, 400);
+    const calStop = window.setTimeout(() => window.clearInterval(calTimer), 15000);
+
+    const onMessage = (event: MessageEvent) => {
+      if (event.origin !== CAL_ORIGIN) return;
+      let data: unknown = event.data;
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          return;
+        }
+      }
+      if (!data || typeof data !== "object") return;
+      const payload = data as Record<string, unknown>;
+      const height =
+        payload["height"] ??
+        payload["scrollHeight"] ??
+        (payload["docHeight"] as unknown) ??
+        (payload["data"] && typeof payload["data"] === "object"
+          ? (payload["data"] as Record<string, unknown>)["height"]
+          : undefined);
+      if (height !== undefined) applyHeight(height);
+      unhide();
+    };
+    window.addEventListener("message", onMessage);
+
+    const embedSrc = `${CAL_ORIGIN}/js/form_embed.js`;
+    if (!document.querySelector(`script[src="${embedSrc}"]`)) {
+      const script = document.createElement("script");
+      script.src = embedSrc;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+
 
 
     const io = new IntersectionObserver(
@@ -74,6 +125,7 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      window.removeEventListener("message", onMessage);
       window.clearInterval(calTimer);
       window.clearTimeout(calStop);
       io.disconnect();
