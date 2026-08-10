@@ -529,10 +529,12 @@ footer{
 .cal-frame iframe {
   width: 100%;
   height: 820px;
+  min-height: 720px;
   border: none;
   display: block;
   border-radius: 10px;
   background: #fff;
+  transition: height 0.25s ease;
 }
 @media (max-width: 640px) {
   .calendario {
@@ -542,6 +544,7 @@ footer{
     padding: 4px;
   }
   .cal-frame iframe {
-    height: 980px;
+    height: 1100px;
+    min-height: 1100px;
   }
 }

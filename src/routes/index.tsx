@@ -125,6 +125,7 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      window.removeEventListener("message", onMessage);
       window.clearInterval(calTimer);
       window.clearTimeout(calStop);
       io.disconnect();
