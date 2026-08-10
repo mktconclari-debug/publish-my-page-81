@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Agendá tu llamada y descubrí el sistema para escalar tu programa high ticket sin vivir en llamadas.",
+          "Aplicá al programa y descubrí el sistema para escalar tu programa high ticket sin vivir en llamadas.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
