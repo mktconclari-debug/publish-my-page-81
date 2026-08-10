@@ -46,14 +46,17 @@ function Landing() {
     };
     document.addEventListener("click", onClick);
 
-    const embedSrc = "https://os.caminodigitalllc.com/js/form_embed.js";
-    let script: HTMLScriptElement | null = null;
-    if (!document.querySelector(`script[src="${embedSrc}"]`)) {
-      script = document.createElement("script");
-      script.src = embedSrc;
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    // El script de embed del calendario esconde el iframe fuera de pantalla
+    // hasta recibir su mensaje de "listo". Si eso no llega, la sección queda
+    // vacía, así que restauramos el iframe con una altura fija.
+    const fixCalendar = () => {
+      const frame = document.querySelector<HTMLIFrameElement>(".cal-frame iframe");
+      if (frame) frame.removeAttribute("style");
+    };
+    fixCalendar();
+    const calTimer = window.setInterval(fixCalendar, 500);
+    const calStop = window.setTimeout(() => window.clearInterval(calTimer), 8000);
+
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -71,8 +74,11 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      window.clearInterval(calTimer);
+      window.clearTimeout(calStop);
       io.disconnect();
     };
+
   }, []);
 
   return <div className="landing-root" dangerouslySetInnerHTML={{ __html: HTML }} />;

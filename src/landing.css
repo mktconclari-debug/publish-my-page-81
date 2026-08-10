@@ -512,33 +512,36 @@ footer{
 
 /* ---------- Calendario ---------- */
 .calendario {
-  padding: 80px 0 90px;
+  padding: 72px 0 88px;
   background: var(--bg);
 }
 .calendario .section-title {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 .cal-frame {
   background: #fff;
-  border: 1.5px solid var(--ink);
-  border-radius: 16px;
-  padding: 10px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--line-gold-soft);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 .cal-frame iframe {
   width: 100%;
-  min-height: 780px;
+  height: 820px;
   border: none;
-  overflow: hidden;
   display: block;
   border-radius: 10px;
+  background: #fff;
 }
 @media (max-width: 640px) {
   .calendario {
-    padding: 56px 0 64px;
+    padding: 52px 0 60px;
+  }
+  .cal-frame {
+    padding: 4px;
   }
   .cal-frame iframe {
-    min-height: 900px;
+    height: 980px;
   }
 }
