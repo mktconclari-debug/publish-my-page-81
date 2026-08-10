@@ -513,17 +513,17 @@ footer{
 /* ---------- Calendario ---------- */
 .calendario {
   padding: 80px 0 90px;
-  background: var(--negro, #0a0a0a);
+  background: var(--bg);
 }
 .calendario .section-title {
   margin-bottom: 34px;
 }
 .cal-frame {
   background: #fff;
-  border: 1.5px solid var(--oro, #c9a227);
+  border: 1.5px solid var(--ink);
   border-radius: 16px;
   padding: 10px;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 .cal-frame iframe {
