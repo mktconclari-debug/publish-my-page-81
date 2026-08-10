@@ -74,8 +74,11 @@ function Landing() {
 
     return () => {
       document.removeEventListener("click", onClick);
+      window.clearInterval(calTimer);
+      window.clearTimeout(calStop);
       io.disconnect();
     };
+
   }, []);
 
   return <div className="landing-root" dangerouslySetInnerHTML={{ __html: HTML }} />;
